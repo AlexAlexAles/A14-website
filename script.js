@@ -82,6 +82,8 @@ const translations = {
     'contacts.form.success':           'Your request has been sent. We will get back to you within 2 business days.',
     'contacts.form.error':             'Please review the form and correct the highlighted fields.',
     'contacts.form.ratelimit':         'Too many requests. Please try again tomorrow.',
+    'contacts.form.submitError':       'Something went wrong while sending your request. Please try again, or email us directly at sales@a14soft.com.',
+    'contacts.form.sending':           'Sending…',
     'toast.title':                     'Thank you!',
     'toast.msg':                       "Your request has been sent — we'll be in touch shortly.",
 
@@ -242,6 +244,8 @@ const translations = {
     'contacts.form.success':           'Su solicitud ha sido enviada. Le responderemos en un plazo de 2 días hábiles.',
     'contacts.form.error':             'Por favor, revise el formulario y corrija los campos marcados.',
     'contacts.form.ratelimit':         'Demasiadas solicitudes. Por favor, inténtelo de nuevo mañana.',
+    'contacts.form.submitError':       'Se produjo un error al enviar su solicitud. Por favor, inténtelo de nuevo o escríbanos directamente a sales@a14soft.com.',
+    'contacts.form.sending':           'Enviando…',
     'toast.title':                     '¡Gracias!',
     'toast.msg':                       'Su solicitud ha sido enviada — nos pondremos en contacto pronto.',
 
@@ -740,52 +744,76 @@ function hideSuccessToast() {
   }, { once: true });
 }
 
-/** Build and open a mailto: URL from form data, then show success toast. */
-function submitForm() {
+const FORMSPREE_ENDPOINT = 'https://formspree.io/f/xkoleoez';
+
+/** Submit form data to Formspree via fetch(), then show success/error feedback in-page. */
+async function submitForm() {
+  const form      = document.getElementById('contact-form');
+  const submitBtn = form.querySelector('.btn-submit');
+  const errorEl   = document.getElementById('form-error-msg');
+
   const name  = document.getElementById('field-name').value.trim();
   const email = document.getElementById('field-email').value.trim();
   const phone = document.getElementById('field-phone').value.trim();
   const area  = document.getElementById('field-area').value;
   const desc  = document.getElementById('field-desc').value.trim();
 
-  const subject = `A14 Inquiry — ${area} — ${name}`;
-  const body = [
-    `Name:  ${name}`,
-    `Email: ${email}`,
-    `Phone: ${phone || 'N/A'}`,
-    `Area:  ${area}`,
-    '',
-    'Project Description:',
-    desc,
-    '',
-    '---',
-    'Sent via a14soft.com contact form'
-  ].join('\n');
+  const payload = {
+    name,
+    email,
+    phone: phone || 'N/A',
+    area,
+    description: desc,
+    subject: `A14 Inquiry — ${area} — ${name}`
+  };
 
-  const mailto = `mailto:sales@a14soft.com`
-    + `?subject=${encodeURIComponent(subject)}`
-    + `&body=${encodeURIComponent(body)}`;
-
-  incrementRateCount();
-  window.location.href = mailto;
-
-  const errorEl = document.getElementById('form-error-msg');
+  const originalBtnText = submitBtn ? submitBtn.textContent : '';
+  if (submitBtn) {
+    submitBtn.disabled = true;
+    submitBtn.textContent = getT('contacts.form.sending') || originalBtnText;
+  }
   if (errorEl) errorEl.hidden = true;
 
-  /* Reset form */
-  document.getElementById('contact-form').reset();
-  const charCount = document.getElementById('char-count');
-  if (charCount) charCount.textContent = '0';
+  try {
+    const response = await fetch(FORMSPREE_ENDPOINT, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'Accept': 'application/json'
+      },
+      body: JSON.stringify(payload)
+    });
 
-  /* Reset custom select trigger */
-  const csValue   = document.querySelector('#cs-area-wrap .cs-value');
-  const csTrigger = document.getElementById('cs-area-trigger');
-  const csList    = document.getElementById('cs-area-list');
-  if (csValue) { csValue.textContent = getT('contacts.form.select'); csValue.classList.add('placeholder'); }
-  if (csTrigger) { csTrigger.setAttribute('aria-expanded', 'false'); csTrigger.classList.remove('invalid'); }
-  if (csList) { csList.classList.remove('open'); csList.querySelectorAll('.cs-option').forEach(o => o.classList.remove('selected')); }
+    if (!response.ok) throw new Error('Formspree request failed');
 
-  showSuccessToast();
+    incrementRateCount();
+
+    /* Reset form */
+    form.reset();
+    const charCount = document.getElementById('char-count');
+    if (charCount) charCount.textContent = '0';
+
+    /* Reset custom select trigger */
+    const csValue   = document.querySelector('#cs-area-wrap .cs-value');
+    const csTrigger = document.getElementById('cs-area-trigger');
+    const csList    = document.getElementById('cs-area-list');
+    if (csValue) { csValue.textContent = getT('contacts.form.select'); csValue.classList.add('placeholder'); }
+    if (csTrigger) { csTrigger.setAttribute('aria-expanded', 'false'); csTrigger.classList.remove('invalid'); }
+    if (csList) { csList.classList.remove('open'); csList.querySelectorAll('.cs-option').forEach(o => o.classList.remove('selected')); }
+
+    showSuccessToast();
+  } catch (err) {
+    if (errorEl) {
+      errorEl.hidden = false;
+      const span = errorEl.querySelector('span[data-i18n]') || errorEl;
+      span.textContent = getT('contacts.form.submitError');
+    }
+  } finally {
+    if (submitBtn) {
+      submitBtn.disabled = false;
+      submitBtn.textContent = originalBtnText;
+    }
+  }
 }
 
 function bindForm() {
