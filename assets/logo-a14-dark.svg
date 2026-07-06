@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 46" role="img" aria-label="A14 logo">
+  <defs>
+    <linearGradient id="dgrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00d4d4"/>
+      <stop offset="100%" stop-color="#8b5cf6"/>
+    </linearGradient>
+  </defs>
+  <!-- Geometric A: left leg -->
+  <polygon points="0,42 9,42 22,2 13,2" fill="#ffffff"/>
+  <!-- Geometric A: right leg -->
+  <polygon points="43,42 34,42 22,2 31,2" fill="#ffffff"/>
+  <!-- Geometric A: crossbar -->
+  <rect x="9" y="25" width="25" height="4.5" fill="#ffffff"/>
+  <!-- 14 numeral -->
+  <text x="52" y="39" font-family="system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif"
+        font-size="33" font-weight="200" fill="#ffffff" letter-spacing="1">14</text>
+  <!-- Brand gradient accent line -->
+  <rect x="0" y="44.5" width="112" height="2.5" fill="url(#dgrad)" rx="1.25"/>
+</svg>

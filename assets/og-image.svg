@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" role="img" aria-label="A14 — Practical AI Solutions for Industry">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f1030"/>
+      <stop offset="100%" stop-color="#1a1f3a"/>
+    </linearGradient>
+    <linearGradient id="acc" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00d4d4"/>
+      <stop offset="100%" stop-color="#8b5cf6"/>
+    </linearGradient>
+    <linearGradient id="acc2" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00d4d4"/>
+      <stop offset="50%" stop-color="#8b5cf6"/>
+      <stop offset="100%" stop-color="#e040fb"/>
+    </linearGradient>
+  </defs>
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <!-- Subtle grid lines -->
+  <line x1="400" y1="0" x2="400" y2="630" stroke="#ffffff" stroke-width="1" opacity="0.04"/>
+  <line x1="800" y1="0" x2="800" y2="630" stroke="#ffffff" stroke-width="1" opacity="0.04"/>
+  <line x1="0" y1="210" x2="1200" y2="210" stroke="#ffffff" stroke-width="1" opacity="0.04"/>
+  <line x1="0" y1="420" x2="1200" y2="420" stroke="#ffffff" stroke-width="1" opacity="0.04"/>
+
+  <!-- Abstract network nodes (right side) -->
+  <circle cx="950" cy="200" r="6" fill="#00d4d4" opacity="0.5"/>
+  <circle cx="1050" cy="300" r="9" fill="#8b5cf6" opacity="0.4"/>
+  <circle cx="980" cy="400" r="5" fill="#e040fb" opacity="0.4"/>
+  <circle cx="1100" cy="180" r="4" fill="#00d4d4" opacity="0.3"/>
+  <circle cx="1120" cy="420" r="7" fill="#8b5cf6" opacity="0.3"/>
+  <line x1="950" y1="200" x2="1050" y2="300" stroke="#00d4d4" stroke-width="1.5" opacity="0.2"/>
+  <line x1="1050" y1="300" x2="980" y2="400" stroke="#8b5cf6" stroke-width="1.5" opacity="0.2"/>
+  <line x1="950" y1="200" x2="1100" y2="180" stroke="#00d4d4" stroke-width="1" opacity="0.15"/>
+  <line x1="1050" y1="300" x2="1120" y2="420" stroke="#e040fb" stroke-width="1" opacity="0.15"/>
+
+  <!-- A14 Logo — large, centered -->
+  <!-- Geometric A: left leg -->
+  <polygon points="328,180 362,180 412,440 378,440" fill="#ffffff"/>
+  <!-- Geometric A: right leg -->
+  <polygon points="498,440 464,440 412,180 448,180" fill="#ffffff"/>
+  <!-- Geometric A: crossbar -->
+  <rect x="358" y="335" width="110" height="20" fill="#ffffff"/>
+  <!-- 14 numeral -->
+  <text x="528" y="430" font-family="system-ui,-apple-system,sans-serif" font-size="220" font-weight="100" fill="#ffffff" opacity="0.95" letter-spacing="4">14</text>
+
+  <!-- Gradient accent bar below logo -->
+  <rect x="328" y="462" width="480" height="6" fill="url(#acc)" rx="3"/>
+
+  <!-- Tagline -->
+  <text x="600" y="534" font-family="system-ui,-apple-system,sans-serif"
+        font-size="28" font-weight="300" fill="#ffffff" opacity="0.7"
+        text-anchor="middle" letter-spacing="2">PRACTICAL AI SOLUTIONS FOR INDUSTRY</text>
+
+  <!-- Bottom gradient bar -->
+  <rect x="0" y="620" width="1200" height="10" fill="url(#acc2)" opacity="0.6"/>
+</svg>
