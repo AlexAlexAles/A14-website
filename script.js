@@ -18,7 +18,7 @@ const translations = {
     /* Home — Hero */
     'home.hero.eyebrow':     'AI Agentic Infrastructure · Production-Ready',
     'home.hero.headline':    'A14 — AI Agentic Infrastructure That Automates Your Business',
-    'home.hero.subheadline': 'We build intelligent agentic systems that automate complex business processes end-to-end. We work with all leading AI models — Anthropic Claude, OpenAI GPT-4, Google Gemini and more — delivering the right intelligence for every task.',
+    'home.hero.subheadline': 'We build intelligent agentic systems that automate complex business processes end-to-end. We work with all leading AI models — Anthropic Claude, OpenAI, Google Gemini and more — delivering the right intelligence for every task.',
     'home.hero.cta2':        'View services',
 
     /* Home — What we do */
@@ -31,10 +31,19 @@ const translations = {
     'home.cases.title':        'Case Studies',
     'home.cases.case1.title':  'Industrial Real-Estate Price & Trend Forecasting',
     'home.cases.case1.desc':   'Neural networks combine historical sales, economic indicators, proximity to infrastructure and multiple external datasets to predict prices and trends 1–3 years ahead. Outputs: price forecasts, risk indicators, and scenario simulations for investment planning.',
-    'home.cases.case2.title':  'Large-Scale Medical Data Analytics',
-    'home.cases.case2.desc':   'End-to-end analytics pipelines and ML models to evaluate treatment effectiveness across large patient cohorts. We analyze post-treatment outcomes to identify which therapies work best under which conditions, supporting evidence-based decisions.',
     'home.cases.case3.title':  'AI Chatbots for Enterprise Data (RAG + DB Connectors)',
     'home.cases.case3.desc':   "Conversational AI connected to a company's internal databases and unstructured knowledge. Users can ask natural-language questions and get accurate answers powered by retrieval-augmented generation (RAG) and secure data connectors.",
+
+    'home.cases.portfoliochat.title': 'Talk to Your Portfolio — AI Chatbots for Real Estate Data',
+    'home.cases.portfoliochat.desc':  "Ask anything about your assets in plain language — occupancy, rent rolls, lease expiries, debt maturities — and get answers in seconds, straight from your databases and documents. Delivered where your team already works: inside your company's ChatGPT or Claude subscription, or as a fully custom interface under your brand. Any data complexity, enterprise-grade access control.",
+    'home.cases.investorreports.title': 'Automated Investor Reports',
+    'home.cases.investorreports.desc':  'Quarterly investor reports generated directly from your data — performance, NOI, distributions and market commentary — formatted to your template. What took analysts days is ready for review in minutes, with every figure traceable to its source.',
+    'home.cases.underwriting.title': 'Underwriting Automation',
+    'home.cases.underwriting.desc':  'AI agents ingest the offering memorandum, rent roll, T-12 and market comps, build the underwriting model and flag the risks — so your team screens more deals and spends its time on judgment, not data entry.',
+    'home.cases.abstraction98.title': 'Lease & Loan Abstraction — 98% Accuracy',
+    'home.cases.abstraction98.desc':  'Key terms extracted from leases and loan agreements — rent schedules, escalations, options, covenants, maturities — into structured data with up to 98% accuracy, outperforming many off-the-shelf tools on the market. Hundreds of documents processed in hours, not weeks.',
+    'home.cases.unifiedplatform.title': 'Unified AI Platform for Real Estate Operations',
+    'home.cases.unifiedplatform.desc':  'One platform that connects multiple AI tools — abstraction, underwriting, reporting and data chat — into a single automated workflow. From a new document landing in the inbox to an IC-ready output, without switching systems.',
 
     /* Services */
     'services.eyebrow': 'What We Build',
@@ -50,8 +59,8 @@ const translations = {
     'services.agri.title':    'Agriculture (AgriTech)',
     'services.agri.desc':     'We build crop yield forecasting, remote-sensing analysis and predictive farm management tools. Our models combine satellite imagery, sensor (IoT) data and weather to optimize inputs and maximize yields.',
 
-    'services.health.title':  'Medicine & Healthcare Analytics',
-    'services.health.desc':   'Large-scale outcome analytics, clinical trial data pipelines and predictive models for patient stratification. We help measure treatment effectiveness and support data-driven clinical decisions.',
+    'services.lease.title':  'Lease & Loan Abstraction',
+    'services.lease.desc':   'Our AI agents read leases and loan agreements the way an experienced analyst does — only faster. Rent schedules, escalations, renewal options, covenants and maturity dates are extracted into structured, audit-ready data with up to 98% accuracy. Process entire portfolios in hours and feed the results straight into your underwriting, reporting and asset management systems.',
 
     'services.mlmodels.title': 'ML Model Development',
     'services.mlmodels.desc':  'We design and build custom predictive models tailored to your business. Demand forecasting, churn prediction, price optimization, anomaly detection — our team builds, trains, and deploys production-ready models integrated directly into your existing workflows and systems.',
@@ -180,7 +189,7 @@ const translations = {
     /* Home — Hero */
     'home.hero.eyebrow':     'Infraestructura IA Agéntica · Lista para Producción',
     'home.hero.headline':    'A14 — Infraestructura IA Agéntica que Automatiza su Negocio',
-    'home.hero.subheadline': 'Construimos sistemas agénticos inteligentes que automatizan procesos empresariales complejos de extremo a extremo. Trabajamos con todos los modelos líderes — Anthropic Claude, OpenAI GPT-4, Google Gemini y más — entregando la inteligencia adecuada para cada tarea.',
+    'home.hero.subheadline': 'Construimos sistemas agénticos inteligentes que automatizan procesos empresariales complejos de extremo a extremo. Trabajamos con todos los modelos líderes — Anthropic Claude, OpenAI, Google Gemini y más — entregando la inteligencia adecuada para cada tarea.',
     'home.hero.cta2':        'Ver servicios',
 
     /* Home — What we do */
@@ -193,10 +202,19 @@ const translations = {
     'home.cases.title':       'Casos de Estudio',
     'home.cases.case1.title': 'Pronóstico de Precios y Tendencias en Real Estate Industrial',
     'home.cases.case1.desc':  'Redes neuronales combinan ventas históricas, indicadores económicos, proximidad a infraestructura y múltiples conjuntos de datos externos para predecir precios y tendencias 1–3 años adelante. Resultados: pronósticos de precios, indicadores de riesgo y simulaciones de escenarios para planificación de inversiones.',
-    'home.cases.case2.title': 'Análisis de Datos Médicos a Gran Escala',
-    'home.cases.case2.desc':  'Pipelines de análisis end-to-end y modelos ML para evaluar la efectividad de tratamientos en grandes cohortes de pacientes. Analizamos resultados post-tratamiento para identificar qué terapias funcionan mejor en qué condiciones, apoyando decisiones basadas en evidencia.',
     'home.cases.case3.title': 'Chatbots de IA para Datos Empresariales (RAG + Conectores DB)',
     'home.cases.case3.desc':  'IA conversacional conectada a las bases de datos internas y el conocimiento no estructurado de la empresa. Los usuarios pueden hacer preguntas en lenguaje natural y obtener respuestas precisas mediante generación aumentada por recuperación (RAG) y conectores de datos seguros.',
+
+    'home.cases.portfoliochat.title': 'Pregunte a su cartera — chatbots de IA para datos inmobiliarios',
+    'home.cases.portfoliochat.desc':  'Pregunte cualquier cosa sobre sus activos en lenguaje natural — ocupación, rent rolls, vencimientos de contratos y de deuda — y obtenga respuestas en segundos, directamente de sus bases de datos y documentos. Integrado donde su equipo ya trabaja: dentro de la suscripción corporativa de ChatGPT o Claude, o como una interfaz totalmente personalizada con su marca. Cualquier complejidad de datos, control de acceso de nivel empresarial.',
+    'home.cases.investorreports.title': 'Informes para inversores automatizados',
+    'home.cases.investorreports.desc':  'Informes trimestrales generados directamente a partir de sus datos — rendimiento, NOI, distribuciones y comentario de mercado — con el formato de su plantilla. Lo que a un analista le llevaba días está listo para revisión en minutos, con cada cifra trazable hasta su origen.',
+    'home.cases.underwriting.title': 'Automatización del underwriting',
+    'home.cases.underwriting.desc':  'Agentes de IA procesan el memorando de oferta, el rent roll, el T-12 y los comparables de mercado, construyen el modelo de underwriting y señalan los riesgos — su equipo analiza más operaciones y dedica su tiempo al criterio, no a introducir datos.',
+    'home.cases.abstraction98.title': 'Abstracción de contratos — 98% de precisión',
+    'home.cases.abstraction98.desc':  'Extraemos los términos clave de contratos de arrendamiento y préstamo — calendarios de renta, actualizaciones, opciones, covenants y vencimientos — en datos estructurados con hasta un 98% de precisión, superando a muchas herramientas del mercado. Cientos de documentos procesados en horas, no semanas.',
+    'home.cases.unifiedplatform.title': 'Plataforma de IA unificada para operaciones inmobiliarias',
+    'home.cases.unifiedplatform.desc':  'Una sola plataforma que conecta varias herramientas de IA — abstracción, underwriting, informes y chat con datos — en un único flujo de trabajo automatizado. Desde que llega un nuevo documento hasta un resultado listo para el comité de inversión, sin cambiar de sistema.',
 
     /* Services */
     'services.eyebrow': 'Lo que Construimos',
@@ -212,8 +230,8 @@ const translations = {
     'services.agri.title':    'Agricultura (AgriTech)',
     'services.agri.desc':     'Construimos herramientas de pronóstico de rendimiento de cultivos, análisis de teledetección y gestión agrícola predictiva. Nuestros modelos combinan imágenes satelitales, datos de sensores (IoT) y condiciones climáticas para optimizar insumos y maximizar rendimientos.',
 
-    'services.health.title':  'Medicina y Analítica de Salud',
-    'services.health.desc':   'Analítica de resultados a gran escala, pipelines de datos de ensayos clínicos y modelos predictivos para estratificación de pacientes. Ayudamos a medir la efectividad de tratamientos y apoyamos decisiones clínicas basadas en datos.',
+    'services.lease.title':  'Abstracción de contratos de arrendamiento y préstamos',
+    'services.lease.desc':   'Nuestros agentes de IA leen contratos de arrendamiento y préstamo como lo haría un analista experimentado, pero más rápido. Calendarios de renta, actualizaciones, opciones de renovación, covenants y fechas de vencimiento se extraen en datos estructurados y auditables con hasta un 98% de precisión. Procese carteras completas en horas e integre los resultados directamente en sus sistemas de underwriting, reporting y gestión de activos.',
 
     'services.mlmodels.title': 'Desarrollo de Modelos ML',
     'services.mlmodels.desc':  'Diseñamos y construimos modelos predictivos personalizados para su negocio. Pronóstico de demanda, predicción de churn, optimización de precios, detección de anomalías — nuestro equipo construye, entrena y despliega modelos listos para producción integrados directamente en sus flujos de trabajo y sistemas existentes.',
